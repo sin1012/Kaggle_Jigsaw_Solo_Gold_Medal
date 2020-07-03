@@ -1,3 +1,4 @@
+![competition](https://github.com/sin1012/Kaggle_Jigsaw_Solo_Gold_Medal/blob/master/submissions%20and%20results/competiton.png)
 # <center> Kaggle: Jigsaw Multilingual Toxic Comment Classficiation
 https://www.kaggle.com/c/jigsaw-multilingual-toxic-comment-classification
 
@@ -12,6 +13,7 @@ June 22, 2020 - Final submission deadline.
 
 ## Summary
 In this competition, I finished with 12th place out of 1621 teams and I was awarded a **solo gold medal**. I joined pretty late(21 days before the competition deadline) and I didn't expect to get any medals/rewards or whatsoever. I am grateful that I was lucky enough to finish well in this competition. I saw many great kernels in this competition and those kernels really helped me get started. I also learned how to use **TPU** for faster training; in fact, most of my training are done in COLAB PRO with TPU support. Most of my models are **XLM-ROBERTA Large**, which is the largest model possible for BERT's variants. To improve the results, I ultilized some common techniques like **Pseudo-Labelling**, **Label Smoothing** **Two-Staged Training** and **Test Time Augmentatin**. I was able to achieve `0.9490` without any post-processing. Later on, I was able to discover some tricks for post processing and I improved my public leaderboard score to `0.9500` and `0.9488` for private leaderboard. Overall, I learned a lot in this competition and it has further developed my understanding of NLP.
+![final standing](https://github.com/sin1012/Kaggle_Jigsaw_Solo_Gold_Medal/blob/master/submissions%20and%20results/final_leaderboard.png)
 
 ## So what is this competition about?
 In brief, this competition requires each competitor to develop models to predict the probability of toxic comments in different languages including **Turkish, Portuguese, Russian, French and Italian** while only training with **English** dataset. The corresponding challenge would be the lack of approaches to develop a robust local validation as the training set only contains **English** dataset. Unlike most competitor, I did not use extra validations for final modelling: I merely used the provided validation set for local validation and observed that XLM-ROBERTA doesn't converge until getting a high validation score; I was able to get a validation score of `0.9600+`, however the leaderboard does not reflect that and then I decided to train with the whole dataset with `3` to `5` epochs according to the public leaderboard feedbacks.
@@ -62,3 +64,8 @@ test.loc[test["lang"] == "it", "toxic"] *= 0.99
 test.loc[test["lang"] == "pt", "toxic"] *= 0.99
 test.loc[test["lang"] == "tr", "toxic"] *= 0.99
 ```
+However, I failed to submit the best sub(`0.9489`) but it didn't affect the final standing.
+![subs](https://github.com/sin1012/Kaggle_Jigsaw_Solo_Gold_Medal/blob/master/submissions%20and%20results/submissions.png)
+
+## Fin
+This is my first serious competition on Kaggle and I truly learned a lot as a ML practitioner. I hope to compete in more competitions in the future.
