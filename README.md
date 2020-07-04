@@ -7,7 +7,7 @@ June 15, 2020 - Entry deadline. You must accept the competition rules before thi
 
 June 15, 2020 - Team Merger deadline. This is the last day participants may join or merge teams.  
 
-June 01, 2020 - **I joined the competition**
+**June 01, 2020 - I joined the competition**
 
 June 22, 2020 - Final submission deadline.  
 
